@@ -21,3 +21,13 @@ Data types:
     -   Ordinal: categorical data that has an explicit ordering (synonym: ordered factor)
 
 # Rectangular data
+
+-   Data frame: rectangular data (like a spreadsheet) is the basic data structure for statistical and machine learning models
+
+-   Feature: a column within a table is commonly referred to as a *feature* (synonyms: attribute, input, predictor, variable)
+
+-   Outcome: many data science projects involve predicting an *outcome* - often a yes/no outcome. The *features* are sometimes used to predict the *outcome* in an experiment or a study (synonyms: dependent variable, response, target, output)
+
+-   Records: a row within a table is commonly referred to as a *record* (synonyms: case, example, instance, observation, pattern, sample)
+
+# Estimates of location
