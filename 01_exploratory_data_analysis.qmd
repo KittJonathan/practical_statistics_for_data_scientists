@@ -1,0 +1,23 @@
+---
+title: "Exploratory Data Analysis"
+format: html
+editor: visual
+---
+
+# Elements of structured data
+
+Data types:
+
+-   Numeric: data that are expressed on a numeric scale
+
+    -   Continuous: data that can take on any value in an interval (synonyms: interval, float, numeric)
+
+    -   Discrete: data than can take on only integer values, such as counts (synonyms: integer, count)
+
+-   Categorical: data that can take on only a specific set of values representing a set of possible categories (synonyms: enums, enumerated, factors, nominal)
+
+    -   Binary: a special case of categorical data with just two categories of values, e.g. 0/1, true/false (synonyms: dichotomous, logical, indicator, boolean)
+
+    -   Ordinal: categorical data that has an explicit ordering (synonym: ordered factor)
+
+# Rectangular data
