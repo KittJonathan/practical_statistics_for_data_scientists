@@ -31,3 +31,54 @@ Data types:
 -   Records: a row within a table is commonly referred to as a *record* (synonyms: case, example, instance, observation, pattern, sample)
 
 # Estimates of location
+
+-   Mean : the sum of all values divided by the number of values (synonym: average)
+
+    $$
+    Mean=\bar{x}=\frac{\sum_{i=1}^n x_i}{n}
+    $$
+
+-   Weighted mean: the sum of all values times a weight divided by the sum of the weights (synonym: weighted average)
+
+$$
+Weighted\ mean=\bar{x}_w=\frac{\sum_{i=1}^n w_ix_i}{\sum_{i=1}^n w_i}
+$$
+
+-   Median: the value such that one-half of the data lies above and below (synonym: 50th percentile)
+
+-   Percentile: the value such that P percent of the data lies below (synonym: quantile)
+
+-   Weighted median: the value such that one-half of the sum of the weights lies above and below the sorted data
+
+-   Trimmed mean: the average of all values after dropping a fixed number of extreme values (synonym: truncated mean)
+
+$$
+Trimmed\ mean=\bar{x}=\frac{\sum_{i=p+1}^{n-p}x_{(i)}}{n-2p}
+$$
+
+-   Robust: not sensitive to extreme values (synonym: resistant)
+
+-   Outlier: a data value that is very different from most of the data (synonym: extreme value)
+
+## Example: location estimates of population and murder rates
+
+```{r}
+state <- read.csv("data/state.csv")
+head(state)
+```
+
+```{r}
+mean(state[['Population']])
+mean(state[['Population']], trim = 0.1)
+median(state[['Population']])
+```
+
+```{r}
+weighted.mean(state[['Murder.Rate']], w = state[['Population']])
+```
+
+```{r}
+matrixStats::weightedMedian(state[['Murder.Rate']], w = state[['Population']])
+```
+
+# Estimates of variability
