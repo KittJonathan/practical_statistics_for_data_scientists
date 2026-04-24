@@ -82,3 +82,65 @@ matrixStats::weightedMedian(state[['Murder.Rate']], w = state[['Population']])
 ```
 
 # Estimates of variability
+
+-   Deviations: the difference between the observed values and the estimate of location
+
+    -   synonyms: errors, residuals
+
+-   Variance: the sum of squared deviations from the mean divided by $n-1$ where $n$ is the number of data values
+
+    -   synonym: mean-squared error
+
+-   Standard deviation: the square root of the variance
+
+-   Mean absolute deviation: the mean of the absolute values of the deviations from the mean
+
+    -   synonyms: l1-norm, Manhattan norm
+
+-   Median absolute deviation from the median: the median of the absolute values of the deviations from the median
+
+-   Range: the difference between the largest and the smallest values in a data set
+
+-   Order statistics: metrics based on the data values sorted from smallest to biggest
+
+    -   synonym: ranks
+
+-   Percentile: the value such that $P$ percent of the values take on this value or less and (100-$P$) percent take on this value or more
+
+    -   synonym: quantile
+
+-   Interquartile range: the difference between the 75th percentile and the 25th percentile
+
+    -   synonym: IQR
+
+## Standard deviation and related estimates
+
+Mean absolute deviation :
+
+$$
+Mean\ absolute\ deviation=\frac{\sum_{i=1}^n |{x_i-\bar{x}}|}{n}
+$$
+
+Variance :
+
+$$
+Variance=s^2=\frac{\sum_{i=1}^n(x_i-\bar{x})^2}{n-1}
+$$
+
+Standard deviation :
+
+$$
+Standard deviation=s=\sqrt{variance}
+$$
+
+Neither the variance, the standard deviation, nor the mean absolute deviation are robust to outliers and extreme values.
+
+A robust estimate of variability is the *median absolute deviation from the median* or MAD:
+
+$$
+Median\ absolute\ deviation=Median(|x_1-m|, |x_2-m|, ..., |x_N-m|)
+$$
+
+where $m$ is the median
+
+## Estimates based on percentiles
